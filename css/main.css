@@ -19,6 +19,7 @@ textarea {
 }
 
 body {
+    font-family: Verdana, Helvetica, Arial, sans-serif;
     font-size: 1em;
     line-height: 1.4;
 }
@@ -95,75 +96,106 @@ textarea {
 html {
     
 }
+
 body {
-margin-left: auto;
-margin-right:auto;
-width: 980px;
+    margin-left: auto;
+    margin-right:auto;
+    width: 1000px;
 }
 
 .content {
-width: 80%;
-font-size: 2.0em;
-line-height: 0.9em;
-z-index: 1;
-position: relative;
+    position: relative;
 }
 
-.content p {
-margin: 6px;
-margin-left: 20px;
+.content p 
+{
+    font-size: 1.0em;
 }
 
 .content a {
-text-decoration: none;
-color: #FFF;
+    text-decoration: none;
 }
 
-.content h3 {
-color: #FFF;
-font-size: 1.0em;
-line-height: .9em;
-margin-bottom: .5em;
+.content .about-us
+{
+    background-image: url(../img/IMG_2127.png);
+    background-position: 0 -260px;
+    background-repeat: no-repeat;
+    background-size: auto 750px;
+    padding-bottom: 50px;
+    text-align: right;
 }
 
-.smallcaps {
-font-size: 0.4em;
-margin-bottom: 0px;
-font-variant: small-caps;
-color: #00B3A3;
-font-weight: bold;
+.content .about-us-copy
+{
+    color: white;
+    display: inline-block;
+    width: 40%;
 }
 
-.smallLower {
-color: #000;
-margin-top: -5px;
-font-size: .4em;
-line-height: .9em;
+.content .about-us-copy h1, .content .about-us-copy p
+{
+    background-color: hsla(42, 0%, 20%, 0.8);
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    display: inline-block;
+    padding: 0 15px;
+    padding-left: 5px;
+}
+
+.content .services-overview
+{
+    position: relative;
+}
+
+.content.who-we-are h2
+{
+    margin-bottom: 5px;
+    margin-top: 35px;
 }
 
 nav
 {
+    padding: 10px;
+    position: relative;
+    width: 100%;
+}
+
+div.logo
+{
+    display: inline-block;
+}
+
+div.logo a
+{
+    text-decoration: none;
+}
+
+.more-info-link a
+{
+    background-color: hsla(42, 0%, 20%, 0.8);
+    border-radius: 4px;
+    color: white;
+    font-size: 0.8em;
+    padding: 5px 10px;
+    position: absolute;
+    right: 10px;
 }
 
 nav ul
 {
-    padding: 0;
-    padding-left: 5px;
-    width: 100%;
+    display: inline-block;
+    vertical-align: -7px;
 }
 
 nav ul li
 {
     cursor: pointer;
     display: inline-block;
+    height: 50px;
     margin-left: 25px;
     text-align: center;
     width: auto;
-}
-
-nav ul li:first-child
-{
-    width: 350px;
 }
 
 nav ul li img.text
@@ -171,13 +203,6 @@ nav ul li img.text
     height: 25px;
     margin-left: 0;
     margin-top: 14px;
-}
-
-nav ul li:first-child img.text
-{
-    height: 31px;
-    margin-left: 0;
-    margin-top: 12px;
 }
 
 nav .logo img.logo
@@ -192,38 +217,150 @@ nav .logo img.logo.text
     margin-top: 10px;
 }
 
-nav li img.highlight
+nav li a
 {
-    display: none;
+    color: black;
+    display: block;
+    text-decoration: none;
+    vertical-align: bottom;
 }
 
-nav li.active img.normal
+nav li.logo a
 {
-    display: none;
+    padding-top: 0;
 }
 
-nav li.active img.highlight
+nav li a:visited
+{
+    color: black;
+}
+
+nav li.active a, nav li a:hover
+{
+    color: rgba(140, 65, 252, 1);
+}
+
+nav .phone-number
+{
+    background-color: rgba(140, 65, 252, 1.0);
+    background-color: hsla(42, 0%, 20%, 0.8);
+    border-radius: 4px;
+    color: white;
+    font-size: 0.8em;
+    padding: 5px 10px;
+    position: absolute;
+    right: 30px;
+    top: 26px;
+}
+
+.services-list
+{
+    list-style-type: none;
+    padding: 0;
+}
+
+.services-list-icon-container
+, .services-list-copy-container
 {
     display: inline-block;
+    vertical-align: top;
+}
+
+.services-list-copy-container
+{
+    width: 75%;
+}
+
+.services-list-icon-container
+{
+    width: 20%;
+}
+
+.services-list-icon.website-building
+{
+    margin-top: -30px;
+    width: 100%;
+}
+
+.services-list-icon.website-maintenance
+{
+    margin-left: 10%;
+    width: 90%;
+}
+
+.services-list-icon.testing
+, .services-list-icon.documentation
+{
+    margin-left: 17px;
+    width: 80%;
+}
+
+.services-list-icon.business-process-guidance
+{
+    margin-left: 33px;
+    margin-top: 15px;
+    width: 65%;
+}
+
+.services-list-icon.ios-app-development
+{
+    margin-left: 7px;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.services-list-icon.not-listed
+{
+    margin-left: 53px;
+    margin-top: 17px;
+    width: 50%;
+}
+
+.shepherd-dog-image
+{
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+}
+
+.shepherd-dog-image img
+{
+    display: block;
+    margin: 1em 0;
+    margin-bottom: 0;
+    width: 350px;
+}
+
+.image-caption
+{
+    background-color: hsla(42, 0%, 20%, 0.8);
+    bottom: 0;
+    color: white;
+    font-size: 0.7em;
+    padding: 2px 5px;
+    position: absolute;
+    right: 0;
+}
+
+.shepherd-dog-copy
+{
+    display: inline-block;
+    width: 640px;
 }
 
 footer
 {
-    bottom: 0px;
     font-size: 12px;
-    left: 0px;
-    position: absolute;
+    margin-top: 100px;
+    padding: 15px 10px;
+    position: relative;
     width: 100%;
 }
 
-.appScreen {
-
-}
-
 #imgTexas {
-height:20px;
-width:20px;
-background-color:transparent;
+    height:20px;
+    width:20px;
+    background-color:transparent;
 }
 
 
@@ -343,55 +480,9 @@ background-color:transparent;
     }
 	
 	.content {
-	   font-size: 2.0em;
-	   line-height: 0.9em;
+       margin-top: 50px;
 	   position: relative;
-       padding-top: 0px;
-       top: 60px;
-       display: inline-block;
-       width: 16em;
-	}
-	
-	.content p {
-	    margin: 30px 0px;
-	}
-
-    .footer
-    {
-        font-size: 2.0em;
-        position: absolute;
-        bottom: 20px;
-        width: 100%;
-        text-align: center;
-    }
-
-	.content h3 {  
-	font-size: 3.0em;
-	line-height: .9em;
-	margin-bottom: .5em;
-	}
-	
-	.smallcaps {
-	font-size: .8em;
-	margin-bottom: 0px;
-	font-variant: small-caps;
-	color: #00B3A3;
-	font-weight: bold;
-    float: clear;
-	}
-	
-	.smallLower {
-	margin-top: 5px;
-	font-size: 1.2em;
-    line-height: 1.2em;
-    padding: 0px 150px;
-    padding-left: 10px;
-	}
-
-	.appScreen {
-        margin: 100px 0px;
-        margin-right: 20px;
-        display: inline-block;
+       width: 1000px;
 	}
 
 	#imgTexas {
@@ -408,71 +499,25 @@ background-color:transparent;
     }
 	body {
         margin-top: 20px;
-	margin-left: auto;
-	margin-right:auto;
-	width: 85vw;
+	    margin-left: auto;
+	    margin-right: auto;
+	    width: 95%;
 	}
 	
 	.content {
-	color: #7B5D95;
-	width: 6em;
-	top: 20px;
-	left:00px;
-	font-size: 1.5em;
-	line-height: 0.9em;
-	z-index: 1;
-	position: relative;
-    display: inline-block;
-	}
-	
-	.content p {
-	margin: 15px;
-	margin-left: 0px;
-	margin-right: 0px;
-	}
-
-	.content h3 {
-	color: #170F1E;
-	font-size: 0.9em;
-	line-height: .9em;
-	margin-bottom: .5em;
-	}
-
-    .footer
-    {
-        font-size: 1.0em;
-        position: absolute;
-        bottom: 20px;
-        width: 90%;
-        text-align: center;
-    }
-	
-	.smallcaps {
-	font-size: .5em;
-	margin-bottom: 0px;
-	font-variant: small-caps;
-	color: #170F1E;
-	font-weight: bold;
-	}
-	
-	.smallLower {
-	margin-top: -5px;
-	font-weight: bold;
-	font-size: .6em;
-    line-height: 1.2em;
-	}
-
-	.appScreen {
-		z-index: -1;
-        width: 45%;
-        margin-left: 0%;
-        display: inline-block;
+    	color: #7B5D95;
+    	top: 20px;
+    	left:00px;
+    	font-size: 1.0em;
+    	line-height: 1.2em;
+    	position: relative;
+        width: 6em;
 	}
 
 	#imgTexas {
-	height:20px;
-	width:20px;
-	background-color:transparent;
+    	height:20px;
+    	width:20px;
+    	background-color:transparent;
 	}
 	
 }
