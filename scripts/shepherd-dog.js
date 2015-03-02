@@ -11,18 +11,6 @@ var ShepherdDog = function ()
 	this.setupEventHandlers = function ()
 	{
 		var self = this;
-
-		$("nav").find("li").off("click");
-
-		$("nav").find("li").on("click", function ()
-		{
-			if(!$(this).hasClass("logo"))
-			{
-				$(this).closest("nav").find("li").removeClass("active");
-
-				$(this).addClass("active");
-			}
-		});
 	};
 };
 

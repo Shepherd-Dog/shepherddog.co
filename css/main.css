@@ -143,6 +143,22 @@ body {
     padding-left: 5px;
 }
 
+.content .services-menu-list
+{
+    list-style-type: none;
+    padding: 0;
+}
+
+.content .services-menu-list li
+{
+    border: 1px solid black;
+    display: inline-block;
+    font-size: 0.7em;
+    padding: 5px;
+    margin-left: 3px;
+    margin-bottom: 3px;
+}
+
 .content .services-overview
 {
     position: relative;
@@ -240,7 +256,7 @@ nav li.active a, nav li a:hover
     color: rgba(140, 65, 252, 1);
 }
 
-nav .phone-number
+nav .phone-number, nav .twitter-container
 {
     background-color: rgba(140, 65, 252, 1.0);
     background-color: hsla(42, 0%, 20%, 0.8);
@@ -251,6 +267,22 @@ nav .phone-number
     position: absolute;
     right: 30px;
     top: 26px;
+}
+
+nav .twitter-container
+{
+    top: 58px;
+}
+
+nav .twitter-container a, nav.twitter-container a:visited
+{
+    color: white;
+    text-decoration: none;
+}
+
+nav .twitter-image
+{
+    width: 16px;
 }
 
 .services-list
