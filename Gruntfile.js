@@ -38,8 +38,8 @@ module.exports = function(grunt) {
       }
     },
     watch: {
-      files: ['<%= jshint.files %>', 'tests/*.html'],
-      tasks: ['jshint', 'qunit', 'uglify']
+      files: ['<%= jshint.files %>', 'tests/*.html', 'css/*.css'],
+      tasks: ['jshint', 'qunit', 'uglify', 'concat']
     }
   });
 
