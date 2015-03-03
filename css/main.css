@@ -20,7 +20,7 @@ textarea {
 
 body {
     font-family: Verdana, Helvetica, Arial, sans-serif;
-    font-size: 1em;
+    font-size: 1.3em;
     line-height: 1.4;
 }
 
@@ -98,12 +98,13 @@ html {
 }
 
 body {
-    margin-left: auto;
-    margin-right:auto;
+    background-color: #EFEFEF;
+    margin: 0 auto;
     width: 1000px;
 }
 
 .content {
+    margin-top: 50px;
     position: relative;
 }
 
@@ -118,29 +119,38 @@ body {
 
 .content .about-us
 {
-    background-image: url(../img/IMG_2127.png);
-    background-position: 0 -260px;
+    background-image: url(/media/brandy-david-happy.png);
+    background-position: -48px -150px;
     background-repeat: no-repeat;
-    background-size: auto 750px;
-    padding-bottom: 50px;
-    text-align: right;
+    background-size: auto 830px;
+    padding-bottom: 150px;
+    text-align: left;
 }
 
 .content .about-us-copy
 {
-    color: white;
+    color: #EFEFEF;
     display: inline-block;
     width: 40%;
 }
 
 .content .about-us-copy h1, .content .about-us-copy p
 {
-    background-color: hsla(42, 0%, 20%, 0.8);
-    border-bottom-left-radius: 4px;
-    border-top-left-radius: 4px;
+    background-color: hsla(42, 0%, 20%, 0.9);
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
     display: inline-block;
     padding: 0 15px;
     padding-left: 5px;
+}
+
+.content .bio-image
+{
+    border-radius: 4px;
+    float: right;
+    margin-left: 25px;
+    margin-bottom: 5px;
+    width: 32%;
 }
 
 .content .services-menu-list
@@ -191,7 +201,7 @@ div.logo a
 {
     background-color: hsla(42, 0%, 20%, 0.8);
     border-radius: 4px;
-    color: white;
+    color: #EFEFEF;
     font-size: 0.8em;
     padding: 5px 10px;
     position: absolute;
@@ -256,33 +266,36 @@ nav li.active a, nav li a:hover
     color: rgba(140, 65, 252, 1);
 }
 
-nav .phone-number, nav .twitter-container
+nav .phone-number
+, nav .twitter-container
+, nav .email-container
 {
     background-color: rgba(140, 65, 252, 1.0);
     background-color: hsla(42, 0%, 20%, 0.8);
     border-radius: 4px;
-    color: white;
-    font-size: 0.8em;
+    bottom: -15px;
+    color: #EFEFEF;
+    display: inline-block;
+    font-size: 1.0em;
+    margin-right: 15px;
     padding: 5px 10px;
-    position: absolute;
-    right: 30px;
-    top: 26px;
+    position: relative;
 }
 
-nav .twitter-container
+nav .twitter-container a
+, nav .twitter-container a:visited
+, nav .email-container a
+, nav .email-container a:visited
+, nav .phone-number a
+, nav .phone-number a:visited
 {
-    top: 58px;
-}
-
-nav .twitter-container a, nav.twitter-container a:visited
-{
-    color: white;
+    color: #EFEFEF;
     text-decoration: none;
 }
 
 nav .twitter-image
 {
-    width: 16px;
+    width: 24px;
 }
 
 .services-list
@@ -348,26 +361,34 @@ nav .twitter-image
     width: 50%;
 }
 
+.shepherd-dog
+{
+    clear: both;
+}
+
 .shepherd-dog-image
 {
-    display: inline-block;
+    float: right;
+    margin-left: 25px;
+    margin-bottom: 5px;
     position: relative;
     vertical-align: top;
+    width: 32%;
 }
 
 .shepherd-dog-image img
 {
+    border-radius: 4px;
     display: block;
-    margin: 1em 0;
-    margin-bottom: 0;
-    width: 350px;
+    margin: 0;
+    width: 100%;
 }
 
 .image-caption
 {
     background-color: hsla(42, 0%, 20%, 0.8);
     bottom: 0;
-    color: white;
+    color: #EFEFEF;
     font-size: 0.7em;
     padding: 2px 5px;
     position: absolute;
@@ -376,13 +397,11 @@ nav .twitter-image
 
 .shepherd-dog-copy
 {
-    display: inline-block;
-    width: 640px;
 }
 
 footer
 {
-    font-size: 12px;
+    font-size: 0.7em;
     margin-top: 100px;
     padding: 15px 10px;
     position: relative;
@@ -503,12 +522,13 @@ footer
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 50em) {
+@media only screen and (min-device-width: 600px) {
     /* Style adjustments for viewports that meet the condition */
     body
     {
-        position: relative;
+        font-size: 1em;
         height: 100%;
+        position: relative;
     }
 	
 	.content {
@@ -517,41 +537,63 @@ footer
        width: 1000px;
 	}
 
+    .content .about-us
+    {
+        background-image: url(/media/brandy-david-happy.png);
+        background-position: 0 -150px;
+        background-size: auto 770px;
+        text-align: left;
+    }
+
 	#imgTexas {
 	   height:50px;
 	   width:50px;
 	   background-color:transparent;
 	}
-}
 
-@media only screen and (max-width: 768px) {
-    /* Style adjustments for viewports that meet the condition */
-    html {
-        height: 100%;
+    nav .phone-number
+    , nav .twitter-container
+    , nav .email-container
+    {
+        background-color: rgba(140, 65, 252, 1.0);
+        background-color: hsla(42, 0%, 20%, 0.8);
+        border-radius: 4px;
+        bottom: auto;
+        color: #EFEFEF;
+        font-size: 0.8em;
+        left: auto;
+        margin: 0;
+        padding: 5px 10px;
+        position: absolute;
+        right: 30px;
+        top: 6px;
     }
-	body {
-        margin-top: 20px;
-	    margin-left: auto;
-	    margin-right: auto;
-	    width: 95%;
-	}
-	
-	.content {
-    	color: #7B5D95;
-    	top: 20px;
-    	left:00px;
-    	font-size: 1.0em;
-    	line-height: 1.2em;
-    	position: relative;
-        width: 6em;
-	}
 
-	#imgTexas {
-    	height:20px;
-    	width:20px;
-    	background-color:transparent;
-	}
-	
+    nav .email-container
+    {
+        top: 38px;
+    }
+
+    nav .twitter-container
+    {
+        top: 70px;
+    }
+
+    nav .twitter-container a
+    , nav .twitter-container a:visited
+    , nav .email-container a
+    , nav .email-container a:visited
+    , nav .phone-number a
+    , nav .phone-number a:visited
+    {
+        color: #EFEFEF;
+        text-decoration: none;
+    }
+
+    nav .twitter-image
+    {
+        width: 16px;
+    }
 }
 
 @media print,

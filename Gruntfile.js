@@ -3,6 +3,15 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    concat: {
+      options: {
+        separator: ""
+      },
+      dist: {
+        src: ["css/normalize.css", "css/main.css"],
+        dest: "minified/shepherd-dogv1.0.0.min.css"
+      }
+    },
     jshint: {
       options: {
         curly: true,
@@ -25,7 +34,7 @@ module.exports = function(grunt) {
       },
       build: {
         src: 'scripts/shepherd-dog.js',
-        dest: 'minified/shepherd-dog.min.js'
+        dest: 'minified/shepherd-dogv1.0.0.min.js'
       }
     },
     watch: {
@@ -38,8 +47,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-qunit');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
   // Default task(s).
-  grunt.registerTask('default', ['jshint', 'qunit', 'watch', 'uglify']);
+  grunt.registerTask('default', ['jshint', 'qunit', 'uglify', 'concat']);
 };
