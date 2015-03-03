@@ -542,13 +542,14 @@ footer
         background-image: url(/media/brandy-david-happy.png);
         background-position: 0 -150px;
         background-size: auto 770px;
+        padding-bottom: 50px;
         text-align: left;
     }
 
 	#imgTexas {
-	   height:50px;
-	   width:50px;
-	   background-color:transparent;
+       background-color: transparent;
+	   height: 50px;
+	   width: 50px;
 	}
 
     nav .phone-number
