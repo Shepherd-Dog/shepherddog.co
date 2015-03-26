@@ -98,7 +98,7 @@ html {
 }
 
 body {
-    background-color: #EFEFEF;
+    background-color: #FEFEFE;
     margin: 0 auto;
     width: 1000px;
 }
@@ -130,7 +130,7 @@ body {
 
 .content .about-us-copy
 {
-    color: #EFEFEF;
+    color: #FEFEFE;
     display: inline-block;
     width: 40%;
 }
@@ -170,7 +170,7 @@ body {
 .content .services-menu-list li
 {
     background-color: rgb(0, 154, 200);
-    background-color: #EFEFEF;
+    background-color: #FEFEFE;
     border: 1px solid black;
     border: 1px solid rgb(0, 154, 200);
     border-radius: 4px;
@@ -184,7 +184,7 @@ body {
 
 .content .services-menu-list li a
 {
-    color: #EFEFEF;
+    color: #FEFEFE;
     color: rgb(0, 154, 200);
     text-decoration: none;
 }
@@ -221,7 +221,7 @@ div.logo a
 {
     background-color: hsla(42, 0%, 20%, 0.8);
     border-radius: 4px;
-    color: #EFEFEF;
+    color: #FEFEFE;
     font-size: 0.8em;
     padding: 5px 10px;
     position: absolute;
@@ -257,7 +257,7 @@ nav .logo img.logo
 
 nav .logo img.logo.text
 {
-    height: 30px;
+    height: 31px;
     margin-left: 5px;
     margin-top: 10px;
 }
@@ -293,7 +293,7 @@ nav .phone-number
     background-color: hsla(42, 0%, 20%, 0.8);
     border-radius: 4px;
     bottom: -15px;
-    color: #EFEFEF;
+    color: #FEFEFE;
     display: inline-block;
     font-size: 1.0em;
     margin-right: 15px;
@@ -308,7 +308,7 @@ nav .twitter-container a
 , nav .phone-number a
 , nav .phone-number a:visited
 {
-    color: #EFEFEF;
+    color: #FEFEFE;
     text-decoration: none;
 }
 
@@ -429,7 +429,7 @@ nav .twitter-image
 {
     background-color: hsla(42, 0%, 20%, 0.8);
     bottom: 0;
-    color: #EFEFEF;
+    color: #FEFEFE;
     font-size: 0.7em;
     padding: 2px 5px;
     position: absolute;
@@ -453,6 +453,18 @@ footer
     padding: 15px 10px;
     position: relative;
     width: 100%;
+}
+
+footer .columns
+{
+    display: inline-block;
+    padding: 5px;
+    width: 32%;
+}
+
+footer .columns:nth-child(even)
+{
+    text-align: center;
 }
 
 #imgTexas {
@@ -607,7 +619,7 @@ footer
         background-color: hsla(42, 0%, 20%, 0.8);
         border-radius: 4px;
         bottom: auto;
-        color: #EFEFEF;
+        color: #FEFEFE;
         font-size: 0.8em;
         left: auto;
         margin: 0;
@@ -634,7 +646,7 @@ footer
     , nav .phone-number a
     , nav .phone-number a:visited
     {
-        color: #EFEFEF;
+        color: #FEFEFE;
         text-decoration: none;
     }
 

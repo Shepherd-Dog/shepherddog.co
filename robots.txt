@@ -1,3 +1,5 @@
 # robotstxt.org/
 
 User-agent: *
+
+sitemap: shepherddog.co/sitemap.xml

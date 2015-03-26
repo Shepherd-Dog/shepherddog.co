@@ -22,9 +22,55 @@ module.exports = function(grunt) {
           cwd: "css/concat",
           src: ["*.css"],
           dest: "minified",
-          ext: "v1.0.0.min.css"
+          ext: "v1.0.2.min.css"
         }]
       }
+    },
+    devUpdate: {
+        main: {
+            options: {
+                updateType: 'report', //just report outdated packages 
+                reportUpdated: false, //don't report up-to-date packages 
+                semver: true, //stay within semver when updating 
+                packages: {
+                    devDependencies: true, //only check for devDependencies 
+                    dependencies: false
+                },
+                packageJson: null, //use matchdep default findup to locate package.json 
+                reportOnlyPkgs: [] //use updateType action on all packages 
+            }
+        }
+    },
+    'http-server': {
+ 
+        'dev': {
+ 
+            // the server root directory 
+            root: "./",
+ 
+            // the server port 
+            // can also be written as a function, e.g. 
+            // port: function() { return 8282; } 
+            port: 8001,
+            
+ 
+            // the host ip address 
+            // If specified to, for example, "127.0.0.1" the server will  
+            // only be available on that ip. 
+            // Specify "0.0.0.0" to be available everywhere 
+            host: "0.0.0.0",
+ 
+            showDir : true,
+            autoIndex: true,
+ 
+            // server default file extension 
+            ext: "html",
+ 
+            // run in parallel with other tasks 
+            runInBackground: false
+ 
+        }
+ 
     },
     imageoptim: {
       optimizeImages: {
@@ -35,6 +81,9 @@ module.exports = function(grunt) {
         },
         src: ["media/*.png"]
       }
+    },
+    'install-dependencies': {
+
     },
     jshint: {
       options: {
@@ -130,6 +179,22 @@ module.exports = function(grunt) {
                   '!**/phantomas/**']
       }
     },
+    svgmin: {
+        options: {
+            plugins: [
+                {
+                    removeViewBox: false
+                }, {
+                    removeUselessStrokeAndFill: false
+                }
+            ]
+        },
+        dist: {
+          files: {
+            'media/logo.svg': 'media/logo.svg'
+          }
+        }
+    },
     uglify: {
       options: {
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
@@ -137,7 +202,7 @@ module.exports = function(grunt) {
       },
       build: {
         src: 'scripts/shepherd-dog.js',
-        dest: 'minified/shepherd-dogv1.0.0.min.js'
+        dest: 'minified/shepherd-dogv1.0.2.min.js'
       }
     },
     watch: {
@@ -158,10 +223,17 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-pagespeed');
   grunt.loadNpmTasks('grunt-phantomas');
   grunt.loadNpmTasks('grunt-sitemap');
+  grunt.loadNpmTasks('grunt-svgmin');
+  grunt.loadNpmTasks('grunt-http-server');
+  grunt.loadNpmTasks('grunt-install-dependencies');
+  grunt.loadNpmTasks('grunt-dev-update');
 
   // Default task(s).
-  grunt.registerTask('default', ['jshint', 'qunit', 'uglify', 'concat', 'cssmin', 'sitemap:dist']);
+  grunt.registerTask('default', ['install-dependencies', 'jshint', 'qunit', 'uglify', 'concat', 'cssmin', 'sitemap:dist']);
 
   //Other tasks
   grunt.registerTask("deploy", ["rsync:prod", "pagespeed", "phantomas"]);
+  grunt.registerTask("optimizeImages", ["svgmin", "imageoptim"]);
+  grunt.registerTask("server", ["http-server:dev"]);
+  grunt.registerTask("w", ["install-dependencies", "watch"]);
 };
