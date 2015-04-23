@@ -955,8 +955,9 @@ footer .columns:nth-child(even)
         display: inline-block;
         height: auto;
         margin-left: 2em;
+        overflow: hidden;
         position: static;
-        vertical-align: -1.6em;
+        vertical-align: -8px;
         width: auto;
     }
 
@@ -970,7 +971,9 @@ footer .columns:nth-child(even)
 
     nav ul li
     {
-        margin-left: 1em;
+        display: table-cell;
+        height: auto;
+        padding: 0 1em;
         text-align: center;
     }
 
@@ -1015,6 +1018,7 @@ footer .columns:nth-child(even)
 
     nav .twitter-image
     {
+        vertical-align: -2px;
         width: 16px;
     }
 
