@@ -2,25 +2,31 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://shepherddog.co/</loc>
-    <lastmod>2015-03-26T15:37:53.000Z</lastmod>
+    <lastmod>2015-04-22T21:53:23.000Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://shepherddog.co/our-work/</loc>
+    <lastmod>2015-04-22T20:53:24.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://shepherddog.co/pricing/</loc>
-    <lastmod>2015-03-26T15:40:58.000Z</lastmod>
+    <lastmod>2015-04-22T20:53:20.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://shepherddog.co/technology-services/</loc>
-    <lastmod>2015-03-26T15:40:50.000Z</lastmod>
+    <lastmod>2015-04-22T20:55:39.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://shepherddog.co/who-we-are/</loc>
-    <lastmod>2015-03-26T15:40:46.000Z</lastmod>
+    <lastmod>2015-04-22T20:53:28.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

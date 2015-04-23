@@ -586,6 +586,7 @@ hr {
 
 img {
     vertical-align: middle;
+    width: 100%;
 }
 
 /*
@@ -620,19 +621,60 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
+.content .sidebar ul.u-list-style-type-disc
+{
+    list-style-type: disc;
+    padding-left: 2em;
+}
+
 html {
     
+}
+
+h1
+, h2
+, h3
+, h4
+{
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 100;
+}
+
+h1
+{
+    font-size: 2.5em;
+}
+
+h2
+{
+    font-size: 2.0em;
+}
+
+h3
+{
+    font-size: 1.5em;
+}
+
+.big-background-image
+{
+    background-image: url(/media/courthouse.png);
+    background-position: 45% 0;
+    background-repeat: no-repeat;
+    background-size: 150% auto;
+    height: 20em;
 }
 
 body {
     background-color: #FEFEFE;
     margin: 0 auto;
-    width: 1000px;
+    width: 100%;
 }
 
 .content {
-    margin-top: 50px;
-    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    padding-top: 2.8em;
 }
 
 .content p 
@@ -645,31 +687,57 @@ body {
     text-decoration: underline;
 }
 
+.content ul
+{
+    list-style-type: none;
+    padding: 0;
+}
+
 .content .about-us
 {
-    background-image: url(/media/brandy-david-happy.png);
+    /*background-image: url(/media/brandy-david-happy.png);
     background-position: -108px -150px;
     background-repeat: no-repeat;
-    background-size: auto 890px;
-    padding-bottom: 50px;
+    background-size: auto 890px;*/
     text-align: left;
+}
+
+.content .about-us-image
+{
+    height: 10em;
+    margin-left: -10%;
+    position: absolute;
+    width: 105%;
 }
 
 .content .about-us-copy
 {
+    background-color: rgba(201, 122, 71, 0.9); /* a nice orangy color */
+    border-radius: 4px;
+    box-shadow: 0 1px 4px #101010;
     color: #FEFEFE;
     display: inline-block;
-    width: 40%;
+    margin-top: -7em;
+    padding: 10px 15px;
+    position: relative;
+    max-width: 95%;
 }
 
-.content .about-us-copy h1, .content .about-us-copy p
+.content .about-us-copy a
+, .content .about-us-copy a:visited
 {
-    background-color: hsla(42, 0%, 20%, 0.9);
-    border-bottom-right-radius: 4px;
-    border-top-right-radius: 4px;
+    color: #FEFEFE;
+    display: block;
+    margin-top: 25px;
+    text-align: right;
+}
+
+.content .about-us-copy h1
+, .content .about-us-copy p
+{
+    /* background-color: hsla(42, 0%, 20%, 0.9); */
     display: inline-block;
-    padding: 0 15px;
-    padding-left: 5px;
+    margin-top: 0;
 }
 
 .content .bio-image
@@ -678,7 +746,7 @@ body {
     float: right;
     margin-left: 25px;
     margin-bottom: 5px;
-    width: 32%;
+    width: 40%;
 }
 
 /* Used on the blog, not on the site */
@@ -716,9 +784,21 @@ body {
     text-decoration: none;
 }
 
-.content .services-overview
+.content .sidebar.our-work li
+{
+    margin-bottom: 2em;
+}
+
+.content .sidebar.our-work li img
+{
+    display: block;
+    margin-top: 1em;
+}
+
+body.home .content .services-overview
 {
     position: relative;
+    top: 3em;
 }
 
 .content.who-we-are h2
@@ -727,16 +807,53 @@ body {
     margin-top: 35px;
 }
 
+header#header
+{
+    background-color: white;
+    box-shadow: 0 1px 4px #101010;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+}
+
+.menu-button-container
+, .contact-info-container-mobile
+{
+    font-size: 0.9em;
+    left: 0.5em;
+    position: absolute;
+    top: 16px;
+    z-index: 10;
+}
+
+.contact-info-container-mobile
+{
+    left: auto;
+    right: 0.5em;
+}
+
+.menu-button-container a
+, .menu-button-container a:visited
+, .contact-info-container-mobile a
+, .contact-info-container-mobile a:visited
+{
+    color: rgb(0, 154, 200);
+    text-decoration: none;
+}
+
 nav
 {
+    margin: 0 auto;
     padding: 10px;
-    position: relative;
-    width: 100%;
+    max-width: 90%;
 }
 
 div.logo
 {
-    display: inline-block;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
 }
 
 div.logo a
@@ -744,29 +861,66 @@ div.logo a
     text-decoration: none;
 }
 
+span.logo
+, span.logo-text
+{
+    display: inline-block;
+    height: auto;
+    width: 130px;
+}
+
+img.logo.text
+{
+    margin-left: .20em;
+    margin-top: .20em;
+}
+
+span.logo
+{
+    width: 40px;
+}
+
 .more-info-link a
 {
     background-color: hsla(42, 0%, 20%, 0.8);
+    background-color: rgba(201, 122, 71, 0.9); /* a nice orangy color */
     border-radius: 4px;
+    box-shadow: 0 1px 4px #101010;
     color: #FEFEFE;
-    font-size: 0.8em;
+    font-size: 1.0em;
     padding: 5px 10px;
     position: absolute;
     right: 10px;
 }
 
+div.main-nav-list-container
+{    
+    background-color: rgba(201, 122, 71, 0.9); /* a nice orangy color */
+    display: none;
+    height: 60px;
+    left: 0;
+    overflow: scroll;
+    position: absolute;
+    top: 2.9em;
+    width: 102%;
+    white-space: nowrap;
+    z-index: 10;
+}
+
 nav ul
 {
-    display: inline-block;
-    vertical-align: -7px;
+    margin: 0;
+    margin-top: 13px;
+    width: auto;
 }
 
 nav ul li
 {
     display: inline-block;
-    height: 50px;
-    margin-left: 25px;
-    text-align: center;
+    height: 37px;
+    margin-right: 25px;
+    text-align: left;
+    vertical-align: middle;
     width: auto;
 }
 
@@ -777,21 +931,10 @@ nav ul li img.text
     margin-top: 14px;
 }
 
-nav .logo img.logo
+nav ul li a
+, nav ul li a:visited
 {
-    height: 50px;
-}
-
-nav .logo img.logo.text
-{
-    height: 31px;
-    margin-left: 5px;
-    margin-top: 10px;
-}
-
-nav li a
-{
-    color: black;
+    color: white;
     display: block;
     text-decoration: none;
     vertical-align: bottom;
@@ -802,14 +945,14 @@ nav li.logo a
     padding-top: 0;
 }
 
-nav li a:visited
-{
-    color: black;
-}
-
-nav li.active a, nav li a:hover
+nav ul li.active a, nav ul li a:hover
 {
     color: rgb(0, 154, 200);
+}
+
+.contact-info-container
+{
+    display: none;
 }
 
 nav .phone-number
@@ -820,6 +963,7 @@ nav .phone-number
     background-color: hsla(42, 0%, 20%, 0.8);
     border-radius: 4px;
     bottom: -15px;
+    box-shadow: 0 1px 4px #101010;
     color: #FEFEFE;
     display: inline-block;
     font-size: 1.0em;
@@ -847,8 +991,8 @@ nav .twitter-image
 .important-info-callout
 {
     float: right;
-    margin-top: -60px;
-    width: 25%;
+    margin-top: 0px;
+    width: 40%;
 }
 
 .services-list
@@ -877,14 +1021,14 @@ nav .twitter-image
 .services-list-icon.website-building
 {
     margin-left: 3px;
-    margin-top: -22px;
+    margin-top: 0;
     width: 90%;
 }
 
 .services-list-icon.website-maintenance
 {
     margin-left: 10%;
-    margin-top: 12px;
+    margin-top: 20px;
     width: 90%;
 }
 
@@ -894,7 +1038,7 @@ nav .twitter-image
 , .services-list-icon.web-application-development
 {
     margin-left: 12px;
-    margin-top: 12px;
+    margin-top: 20px;
     width: 80%;
 }
 
@@ -911,21 +1055,26 @@ nav .twitter-image
 .services-list-icon.business-process-guidance
 {
     margin-left: 28px;
-    margin-top: 25px;
+    margin-top: 30px;
     width: 65%;
+}
+
+.services-list-icon.web-application-development
+{
+    margin-top: 18px;
 }
 
 .services-list-icon.ios-app-development
 {
     margin-left: 15px;
-    margin-top: 17px;
+    margin-top: 25px;
     width: 80%;
 }
 
 .services-list-icon.not-listed
 {
     margin-left: 53px;
-    margin-top: 25px;
+    margin-top: 30px;
     width: 50%;
 }
 
@@ -941,7 +1090,7 @@ nav .twitter-image
     margin-bottom: 5px;
     position: relative;
     vertical-align: top;
-    width: 32%;
+    width: 45%;
 }
 
 .shepherd-dog-image img
@@ -966,8 +1115,28 @@ nav .twitter-image
 /* only affect blog.shepherddog.co currently */
 #sidebar
 {
-    display: none;
+    /*display: none;*/
 }
+
+div#main .sleeve .content
+, div#main .sleeve .sidebar
+{
+    display: inline-block;
+    vertical-align: top;
+}
+
+div#main .sleeve #content
+{
+    width: 100%;
+}
+
+div#main .sleeve #sidebar
+{
+    margin-left: 0;
+    margin-top: 25px;
+    width: 100%;
+}
+/* END only affect blog.shepherddog.co */
 
 .shepherd-dog-copy
 {
@@ -975,17 +1144,25 @@ nav .twitter-image
 
 footer
 {
-    font-size: 0.7em;
+    font-size: 0.5em;
     margin-top: 100px;
-    padding: 15px 10px;
+    margin-top: 30em;
     position: relative;
     width: 100%;
+}
+
+footer > div
+{
+    margin: 0 auto;
+    max-width: 90%;    
+    padding: 15px 10px;
 }
 
 footer .columns
 {
     display: inline-block;
     padding: 5px;
+    vertical-align: top;
     width: 32%;
 }
 
@@ -1107,29 +1284,124 @@ footer .columns:nth-child(even)
    Theses examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-
-@media only screen and (min-device-width: 600px) {
+@media only screen and (min-device-width: 600px)
+, only screen and (max-device-width: 600px) and (orientation: landscape) /* targeting iPhone 6 Plus */
+{
     /* Style adjustments for viewports that meet the condition */
+
     body
     {
         font-size: 1em;
         height: 100%;
+        overflow-x: hidden;
         position: relative;
     }
+
+    body.home .content
+    {
+        padding-top: 2.0em;
+    }
+
+    body.technology-services li.technology-services a
+    , body.technology-services li.technology-services a:visited
+    {
+        color: rgb(0, 154, 200);   
+    }
+
+    body.who-we-are li.who-we-are a
+    , body.who-we-are li.who-we-are a a:visited
+    {
+        color: rgb(0, 154, 200);   
+    }
+
+    body.pricing li.pricing a
+    , body.pricing li.pricing a a:visited
+    {
+        color: rgb(0, 154, 200);   
+    }
+
+    body.our-work li.our-work a
+    , body.our-work li.our-work a a:visited
+    {
+        color: rgb(0, 154, 200);   
+    }
+
+    body.blog li.blog a
+    , body.blog li.blog a a:visited
+    {
+        color: rgb(0, 154, 200);   
+    }
 	
-	.content {
-       margin-top: 50px;
-	   position: relative;
-       width: 1000px;
+	.content 
+    {
+       max-width: 1000px;
+       padding-top: 6em;
+       position: relative;
 	}
+
+    .content .with-sidebar
+    , .content .sidebar
+    {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .content .with-sidebar
+    {
+        width: 60%;
+    }
+
+    .content .sidebar
+    {
+        margin-left: 4.5%;
+        margin-top: 2%;
+        width: 25%;
+    }
 
     .content .about-us
     {
-        background-image: url(/media/brandy-david-happy.png);
-        background-position: 0 -150px;
-        background-size: auto 770px;
-        padding-bottom: 50px;
         text-align: left;
+    }
+
+    .big-background-image
+    {
+        background-image: url(/media/courthouse.png);
+        background-position: 45% 0;
+        background-repeat: no-repeat;
+        background-size: 150% auto;
+        height: 50em;
+    }
+
+    .content .about-us-image
+    {
+        height: 600px;
+        margin-left: -24.3%;
+        padding-top: 0;
+        position: static;
+        width: 140%;
+    }
+
+    .content .about-us-copy
+    {
+        color: #FEFEFE;
+        display: inline-block;
+        margin-top: -5em;
+        position: relative;
+        top: 0;
+        width: 40%;
+    }
+
+    body.home .content .services-overview
+    {
+        display: inline-block;
+        margin-left: 5%;
+        top: 0;
+        width: 50%;
+    }
+
+    header#header
+    {
+        white-space: nowrap;
     }
 
 	#imgTexas {
@@ -1138,12 +1410,114 @@ footer .columns:nth-child(even)
 	   width: 50px;
 	}
 
+    div.contact-info-container
+    {
+        display: block;
+        position: absolute;
+        right: 30px;
+        top: 85px;
+    }
+
+    footer
+    {
+        font-size: 0.7em;
+        margin-top: 100px;
+    }
+
+    footer > div
+    {
+        margin: 0 auto;
+        max-width: 1000px;
+    }
+
+    .important-info-callout
+    {
+        float: right;
+        margin-top: -60px;
+        width: 35%;
+    }
+
+    .menu-button-container
+    , .contact-info-container-mobile
+    {
+        display: none;
+    }
+
+    div.logo
+    {
+        display: inline-block;
+        margin: 0;
+        text-align: left;
+    }
+
+    span.logo
+    , span.logo-text
+    {
+        display: inline-block;
+        width: 176px;
+    }
+
+    span.logo
+    {
+        height: 50px;
+        width: 50px;
+    }
+
+    nav .logo img.logo.text
+    {
+        margin-left: 5px;
+        margin-top: 10px;
+    }
+
+    nav
+    {
+        max-width: 1000px;
+        position: relative;
+    }
+
+    div.main-nav-list-container
+    {
+        background-color: transparent;
+        display: inline-block;
+        height: auto;
+        margin-left: 2em;
+        position: static;
+        vertical-align: -1.6em;
+        width: auto;
+    }
+
+    nav ul
+    {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        vertical-align: -7px;
+    }
+
+    nav ul li
+    {
+        margin-left: 1em;
+        text-align: center;
+    }
+
+    nav ul li a
+    , nav ul li a:visited
+    {
+        color: black;
+    }
+
+    nav ul li.active a, nav ul li a:hover
+    {
+        color: rgb(0, 154, 200);
+    }
+
     nav .phone-number
     , nav .twitter-container
     , nav .email-container
     {
         background-color: rgba(140, 65, 252, 1.0);
         background-color: hsla(42, 0%, 20%, 0.8);
+        background-color: rgba(201, 122, 71, 0.9);
         border-radius: 4px;
         bottom: auto;
         color: #FEFEFE;
@@ -1151,19 +1525,7 @@ footer .columns:nth-child(even)
         left: auto;
         margin: 0;
         padding: 5px 10px;
-        position: absolute;
-        right: 30px;
-        top: 6px;
-    }
-
-    nav .email-container
-    {
-        top: 38px;
-    }
-
-    nav .twitter-container
-    {
-        top: 70px;
+        position: relative;
     }
 
     nav .twitter-container a
@@ -1180,6 +1542,324 @@ footer .columns:nth-child(even)
     nav .twitter-image
     {
         width: 16px;
+    }
+
+    div#main .sleeve #content
+    , div#main .sleeve #sidebar
+    {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    div#main .sleeve #content
+    {
+        width: 60%;
+    }
+
+    div#main .sleeve #sidebar
+    {
+        margin-left: 9%;
+        margin-top: 25px;
+        width: 30%;
+    }
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) 
+{
+    nav ul li
+    {
+        font-size: 0.8em;
+    }
+}
+
+@media only screen 
+and (max-device-width: 600px) 
+and (orientation: landscape) /* targeting iPhone 6 Plus */
+{
+    nav ul li
+    {
+        font-size: 0.8em;
+    }
+
+    span.logo
+    , span.logo-text
+    {
+        display: inline-block;
+        height: auto;
+        width: 130px;
+    }
+
+    img.logo.text
+    {
+        margin-left: .20em;
+        margin-top: .20em;
+    }
+
+    span.logo
+    {
+        width: 40px;
+    }
+
+    div.contact-info-container
+    {
+        /* display: none; */
+    }
+}
+
+@media only screen 
+and (min-width: 500px)
+and (min-device-width: 1024px) {
+    .big-background-image
+    {
+        background-image: url(/media/courthouse.png);
+        background-position: 45% 0;
+        background-repeat: no-repeat;
+        background-size: 150% auto;
+        height: 25em;
+    }
+    
+    .content .about-us-copy
+    {
+        margin-top: -8em;
+    }
+
+    body.home .content .services-overview
+    {
+        width: 45%;
+    }
+}
+
+@media only screen 
+and (min-width: 600px)
+and (min-device-width: 1024px) {
+    .big-background-image
+    {
+        background-image: url(/media/courthouse.png);
+        background-position: 45% 0;
+        background-repeat: no-repeat;
+        background-size: 150% auto;
+        height: 30em;
+    }
+    
+    .content .about-us-copy
+    {
+        margin-top: -11em;
+    }
+
+    body.home .content .services-overview
+    {
+        width: 45%;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .big-background-image
+    {
+        background-image: url(/media/courthouse.png);
+        background-position: 45% 0;
+        background-repeat: no-repeat;
+        background-size: 150% auto;
+        height: 34em;
+    }
+    
+    .content .about-us-copy
+    {
+        margin-top: -11em;
+    }
+
+    body.home .content .services-overview
+    {
+        width: 45%;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .big-background-image
+    {
+        background-image: url(/media/courthouse.png);
+        background-position: 45% 0;
+        background-repeat: no-repeat;
+        background-size: 150% auto;
+        height: 39em;
+    }
+    
+    .content .about-us-copy
+    {
+        margin-top: -11em;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .big-background-image
+    {
+        background-image: url(/media/courthouse.png);
+        background-position: 45% 0;
+        background-repeat: no-repeat;
+        background-size: 150% auto;
+        height: 43em;
+    }
+    
+    .content .about-us-copy
+    {
+        margin-top: -11em;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .big-background-image
+    {
+        background-image: url(/media/courthouse.png);
+        background-position: 45% 0;
+        background-repeat: no-repeat;
+        background-size: 150% auto;
+        height: 46em;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .big-background-image
+    {
+        background-image: url(/media/courthouse.png);
+        background-position: 45% 0;
+        background-repeat: no-repeat;
+        background-size: 150% auto;
+        height: 49em;
+    }
+    
+    .content .about-us-copy
+    {
+        margin-top: -11em;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .big-background-image
+    {
+        background-image: url(/media/courthouse.png);
+        background-position: 45% 0;
+        background-repeat: no-repeat;
+        background-size: 150% auto;
+        height: 52em;
+    }
+    
+    .content .about-us-copy
+    {
+        margin-top: -11em;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    .big-background-image
+    {
+        background-image: url(/media/courthouse.png);
+        background-position: 45% 0;
+        background-repeat: no-repeat;
+        background-size: 150% auto;
+        height: 55em;
+    }
+    
+    .content .about-us-copy
+    {
+        margin-top: -11em;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .big-background-image
+    {
+        background-image: url(/media/courthouse.png);
+        background-position: 45% 0;
+        background-repeat: no-repeat;
+        background-size: 150% auto;
+        height: 58em;
+    }
+    
+    .content .about-us-copy
+    {
+        margin-top: -11em;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .big-background-image
+    {
+        background-image: url(/media/courthouse.png);
+        background-position: 45% 0;
+        background-repeat: no-repeat;
+        background-size: 150% auto;
+        height: 61em;
+    }
+    
+    .content .about-us-copy
+    {
+        margin-top: -11em;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .big-background-image
+    {
+        background-image: url(/media/courthouse.png);
+        background-position: 45% 0;
+        background-repeat: no-repeat;
+        background-size: 150% auto;
+        height: 64em;
+    }
+    
+    .content .about-us-copy
+    {
+        margin-top: -11em;
+    }
+}
+
+@media only screen and (min-width: 1700px) {
+    .big-background-image
+    {
+        background-image: url(/media/courthouse.png);
+        background-position: 45% 0;
+        background-repeat: no-repeat;
+        background-size: 150% auto;
+        height: 67em;
+    }
+
+    .content .about-us-copy
+    {
+        margin-top: -11em;
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+    .big-background-image
+    {
+        background-image: url(/media/courthouse.png);
+        background-position: 45% 0;
+        background-repeat: no-repeat;
+        background-size: 150% auto;
+        height: 70em;
+    }
+
+    .content .about-us-copy
+    {
+        margin-top: -11em;
+    }
+}
+
+@media only screen and (min-width: 1900px) {
+    .big-background-image
+    {
+        background-image: url(/media/courthouse.png);
+        background-position: 45% 0;
+        background-repeat: no-repeat;
+        background-size: 150% auto;
+        height: 71em;
+    }
+
+    .content .about-us-copy
+    {
+        margin-top: -11em;
     }
 }
 

@@ -11,6 +11,11 @@ var ShepherdDog = function ()
 	this.setupEventHandlers = function ()
 	{
 		var self = this;
+
+		$(".menu-button-container").find("a").on("click", function ()
+		{
+			$(".main-nav-list-container").slideToggle();
+		});
 	};
 };
 
