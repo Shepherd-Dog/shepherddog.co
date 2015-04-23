@@ -399,13 +399,13 @@ span.logo
 div.main-nav-list-container
 {    
     background-color: rgba(201, 122, 71, 0.9); /* a nice orangy color */
-    display: none;
-    height: 50px;
+    height: 0;
     left: 0;
     margin-top: 2px;
     overflow: scroll;
     position: absolute;
     top: 2.9em;
+    visibility: hidden;
     width: 102%;
     white-space: nowrap;
     z-index: 10;
@@ -994,6 +994,7 @@ footer .columns:nth-child(even)
         overflow: hidden;
         position: static;
         vertical-align: -8px;
+        visibility: visible;
         width: auto;
     }
 
