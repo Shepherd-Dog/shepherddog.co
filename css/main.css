@@ -954,8 +954,9 @@ footer .columns:nth-child(even)
         display: inline-block;
         height: auto;
         margin-left: 2em;
+        overflow: hidden;
         position: static;
-        vertical-align: -1.6em;
+        vertical-align: -0.45em;
         width: auto;
     }
 
