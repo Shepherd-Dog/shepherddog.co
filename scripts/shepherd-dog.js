@@ -30,7 +30,7 @@ var ShepherdDog = function ()
 
 				$(".main-nav-list-container").css({ visibility: "visible" });
 
-				$(".main-nav-list-container").animate({ "height": "60px" }, 300);
+				$(".main-nav-list-container").animate({ "height": "50px" }, 300);
 
 				if(window.location.href.toLowerCase().indexOf("pricing") !== -1)
 				{

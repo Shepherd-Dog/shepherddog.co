@@ -129,6 +129,36 @@ h3
     font-size: 1.5em;
 }
 
+body.technology-services li.technology-services a
+, body.technology-services li.technology-services a:visited
+{
+    color: rgb(255, 191, 145);   
+}
+
+body.who-we-are li.who-we-are a
+, body.who-we-are li.who-we-are a a:visited
+{
+    color: rgb(255, 191, 145); 
+}
+
+body.pricing li.pricing a
+, body.pricing li.pricing a a:visited
+{
+    color: rgb(255, 191, 145);   
+}
+
+body.our-work li.our-work a
+, body.our-work li.our-work a a:visited
+{
+    color: rgb(255, 191, 145);
+}
+
+body.blog li.blog a
+, body.blog li.blog a a:visited
+{
+    color: rgb(255, 191, 145);   
+}
+
 .big-background-image
 {
     background-image: url(/media/courthouse.png);
@@ -371,6 +401,7 @@ div.main-nav-list-container
     background-color: rgba(201, 122, 71, 0.9); /* a nice orangy color */
     height: 0;
     left: 0;
+    margin-top: 2px;
     overflow: scroll;
     position: absolute;
     top: 2.9em;
@@ -383,7 +414,7 @@ div.main-nav-list-container
 nav ul
 {
     margin: 0;
-    margin-top: 13px;
+    margin-top: 9px;
     width: auto;
 }
 
@@ -418,7 +449,7 @@ nav li.logo a
     padding-top: 0;
 }
 
-nav ul li.active a, nav ul li a:hover
+nav ul li.active a
 {
     color: rgb(0, 154, 200);
 }
@@ -494,14 +525,14 @@ nav .twitter-image
 .services-list-icon.website-building
 {
     margin-left: 3px;
-    margin-top: 0;
+    margin-top: 27px;
     width: 90%;
 }
 
 .services-list-icon.website-maintenance
 {
     margin-left: 10%;
-    margin-top: 20px;
+    margin-top: 36px;
     width: 90%;
 }
 
@@ -517,37 +548,42 @@ nav .twitter-image
 
 .services-list-icon.testing
 {
-    margin-top: 17px;
+    margin-top: 34px;
 }
 
-.services-list-icon.web-application-development
+.services-list-icon.documentation
 {
-    margin-top: 7px;
+    margin-top: 36px;
+}
+
+.services-list-icon.training
+{
+    margin-top: 36px;
 }
 
 .services-list-icon.business-process-guidance
 {
-    margin-left: 28px;
-    margin-top: 30px;
+    margin-left: 17px;
+    margin-top: 40px;
     width: 65%;
 }
 
 .services-list-icon.web-application-development
 {
-    margin-top: 18px;
+    margin-top: 34px;
 }
 
 .services-list-icon.ios-app-development
 {
     margin-left: 15px;
-    margin-top: 25px;
+    margin-top: 36px;
     width: 80%;
 }
 
 .services-list-icon.not-listed
 {
-    margin-left: 53px;
-    margin-top: 30px;
+    margin-left: 25px;
+    margin-top: 37px;
     width: 50%;
 }
 
@@ -559,11 +595,12 @@ nav .twitter-image
 .shepherd-dog-image
 {
     float: right;
-    margin-left: 25px;
+    margin-left: 5px;
     margin-bottom: 5px;
+    margin-top: 8px;
     position: relative;
     vertical-align: top;
-    width: 45%;
+    width: 60%;
 }
 
 .shepherd-dog-image img
@@ -577,9 +614,10 @@ nav .twitter-image
 .image-caption
 {
     background-color: hsla(42, 0%, 20%, 0.8);
+    border-bottom-right-radius: 4px;
     bottom: 0;
     color: #FEFEFE;
-    font-size: 0.7em;
+    font-size: 0.45em;
     padding: 2px 5px;
     position: absolute;
     right: 0;
@@ -757,8 +795,7 @@ footer .columns:nth-child(even)
    Theses examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-@media only screen and (min-device-width: 600px)
-, only screen and (max-device-width: 600px) and (orientation: landscape) /* targeting iPhone 6 Plus */
+@media only screen and (min-device-width: 600px), only screen and (min-device-width: 325px) and (max-device-width: 600px) and (orientation: landscape) /* targeting iPhone 6 Plus */
 {
     /* Style adjustments for viewports that meet the condition */
 
@@ -1047,12 +1084,117 @@ footer .columns:nth-child(even)
         margin-top: 25px;
         width: 30%;
     }
+    
+    .services-list-icon-container
+    , .services-list-copy-container
+    {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .services-list-copy-container
+    {
+        width: 75%;
+    }
+
+    .services-list-icon-container
+    {
+        width: 20%;
+    }
+
+    .services-list-icon.website-building
+    {
+        margin-left: 3px;
+        margin-top: 0;
+        width: 90%;
+    }
+
+    .services-list-icon.website-maintenance
+    {
+        margin-left: 10%;
+        margin-top: 20px;
+        width: 90%;
+    }
+
+    .services-list-icon.testing
+    , .services-list-icon.documentation
+    , .services-list-icon.training
+    , .services-list-icon.web-application-development
+    {
+        margin-left: 12px;
+        margin-top: 20px;
+        width: 80%;
+    }
+
+    .services-list-icon.testing
+    {
+        margin-top: 17px;
+    }
+
+    .services-list-icon.web-application-development
+    {
+        margin-top: 7px;
+    }
+
+    .services-list-icon.business-process-guidance
+    {
+        margin-left: 28px;
+        margin-top: 30px;
+        width: 65%;
+    }
+
+    .services-list-icon.web-application-development
+    {
+        margin-top: 18px;
+    }
+
+    .services-list-icon.ios-app-development
+    {
+        margin-left: 15px;
+        margin-top: 25px;
+        width: 80%;
+    }
+
+    .services-list-icon.not-listed
+    {
+        margin-left: 53px;
+        margin-top: 25px;
+        width: 50%;
+    }
+
+    .shepherd-dog-image
+    {
+        float: right;
+        margin-left: 20px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        position: relative;
+        vertical-align: top;
+        width: 40%;
+    }
+
+    .shepherd-dog-image img
+    {
+        border-radius: 4px;
+        display: block;
+        margin: 0;
+        width: 100%;
+    }
+
+    .image-caption
+    {
+        background-color: hsla(42, 0%, 20%, 0.8);
+        border-bottom-right-radius: 4px;
+        bottom: 0;
+        color: #FEFEFE;
+        font-size: 0.7em;
+        padding: 2px 5px;
+        position: absolute;
+        right: 0;
+    }
 }
 
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : portrait) 
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) /* targeting iPad */
 {
     nav ul li
     {
@@ -1060,13 +1202,12 @@ and (orientation : portrait)
     }
 }
 
-@media only screen 
-and (max-device-width: 600px) 
-and (orientation: landscape) /* targeting iPhone 6 Plus */
+@media only screen and (max-device-width: 600px) and (orientation: landscape) /* targeting iPhone 6 Plus */
 {
     nav ul li
     {
         font-size: 0.8em;
+        padding-bottom: 6px
     }
 
     span.logo
@@ -1086,11 +1227,6 @@ and (orientation: landscape) /* targeting iPhone 6 Plus */
     span.logo
     {
         width: 40px;
-    }
-
-    div.contact-info-container
-    {
-        /* display: none; */
     }
 }
 
@@ -1159,6 +1295,24 @@ and (min-device-width: 1024px) {
     {
         width: 45%;
     }
+
+    .shepherd-dog-image
+    {
+        width: 60%;
+    }
+
+    .services-list-icon.business-process-guidance
+    {
+        margin-left: 17px;
+    }
+
+    .services-list-icon.not-listed
+    {
+        margin-left: 33px;
+        margin-top: 28px;
+        width: 50%;
+    }
+
 }
 
 @media only screen and (min-width: 800px) {
@@ -1340,6 +1494,118 @@ and (min-device-width: 1024px) {
         background-repeat: no-repeat;
         background-size: 150% auto;
         height: 71em;
+    }
+
+    .content .about-us-copy
+    {
+        margin-top: -11em;
+    }
+}
+
+@media only screen and (min-width: 2000px) {
+    .big-background-image
+    {
+        background-image: url(/media/courthouse.png);
+        background-position: 45% 0;
+        background-repeat: no-repeat;
+        background-size: 150% auto;
+        height: 74em;
+    }
+
+    .content .about-us-copy
+    {
+        margin-top: -11em;
+    }
+}
+
+@media only screen and (min-width: 2100px) {
+    .big-background-image
+    {
+        background-image: url(/media/courthouse.png);
+        background-position: 45% 0;
+        background-repeat: no-repeat;
+        background-size: 150% auto;
+        height: 77em;
+    }
+
+    .content .about-us-copy
+    {
+        margin-top: -11em;
+    }
+}
+
+@media only screen and (min-width: 2200px) {
+    .big-background-image
+    {
+        background-image: url(/media/courthouse.png);
+        background-position: 45% 20%;
+        background-repeat: no-repeat;
+        background-size: 150% auto;
+        height: 83em;
+    }
+
+    .content .about-us-copy
+    {
+        margin-top: -11em;
+    }
+}
+
+@media only screen and (min-width: 2300px) {
+    .big-background-image
+    {
+        background-image: url(/media/courthouse.png);
+        background-position: 45% 20%;
+        background-repeat: no-repeat;
+        background-size: 150% auto;
+        height: 84em;
+    }
+
+    .content .about-us-copy
+    {
+        margin-top: -11em;
+    }
+}
+
+@media only screen and (min-width: 2400px) {
+    .big-background-image
+    {
+        background-image: url(/media/courthouse.png);
+        background-position: 45% 20%;
+        background-repeat: no-repeat;
+        background-size: 150% auto;
+        height: 85em;
+    }
+
+    .content .about-us-copy
+    {
+        margin-top: -11em;
+    }
+}
+
+@media only screen and (min-width: 2500px) {
+    .big-background-image
+    {
+        background-image: url(/media/courthouse.png);
+        background-position: 45% 20%;
+        background-repeat: no-repeat;
+        background-size: 150% auto;
+        height: 86em;
+    }
+
+    .content .about-us-copy
+    {
+        margin-top: -11em;
+    }
+}
+
+@media only screen and (min-width: 2600px) {
+    .big-background-image
+    {
+        background-image: url(/media/courthouse.png);
+        background-position: 45% 20%;
+        background-repeat: no-repeat;
+        background-size: 150% auto;
+        height: 87;
     }
 
     .content .about-us-copy
