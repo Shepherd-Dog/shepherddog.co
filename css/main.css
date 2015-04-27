@@ -1029,6 +1029,13 @@ footer .columns:nth-child(even)
         vertical-align: top;
     }
 
+    div#main .sleeve #content ul
+    , div#main .sleeve #sidebar ul
+    {
+        list-style-type: disc;
+        padding-left: 25px;
+    }
+
     div#main .sleeve #content
     {
         width: 60%;
