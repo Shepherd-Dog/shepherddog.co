@@ -102,7 +102,7 @@ textarea {
 }
 
 html {
-    
+
 }
 
 h1
@@ -132,19 +132,19 @@ h3
 body.technology-services li.technology-services a
 , body.technology-services li.technology-services a:visited
 {
-    color: rgb(255, 191, 145);   
+    color: rgb(255, 191, 145);
 }
 
 body.who-we-are li.who-we-are a
 , body.who-we-are li.who-we-are a a:visited
 {
-    color: rgb(255, 191, 145); 
+    color: rgb(255, 191, 145);
 }
 
 body.pricing li.pricing a
 , body.pricing li.pricing a a:visited
 {
-    color: rgb(255, 191, 145);   
+    color: rgb(255, 191, 145);
 }
 
 body.our-work li.our-work a
@@ -153,15 +153,27 @@ body.our-work li.our-work a
     color: rgb(255, 191, 145);
 }
 
+body.our-apps li.our-apps a
+, body.our-apps li.our-apps a a:visited
+{
+    color: rgb(255, 191, 145);
+}
+
+body.support li.support a
+, body.support li.support a a:visited
+{
+    color: rgb(255, 191, 145);
+}
+
 body.blog li.blog a
 , body.blog li.blog a a:visited
 {
-    color: rgb(255, 191, 145);   
+    color: rgb(255, 191, 145);
 }
 
 .big-background-image
 {
-    background-image: url(/media/courthouse.png);
+    background-image: url(/media/courthouse.jpeg);
     background-position: 45% 0;
     background-repeat: no-repeat;
     background-size: 150% auto;
@@ -180,7 +192,7 @@ body {
     padding-top: 2.8em;
 }
 
-.content p 
+.content p
 {
     font-size: 1.0em;
 }
@@ -312,7 +324,9 @@ body.home .content .services-overview
 
 header#header
 {
-    background-color: white;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(250, 250, 250, 0.6);
     box-shadow: 0 1px 4px #101010;
     position: fixed;
     top: 0;
@@ -397,7 +411,7 @@ span.logo
 }
 
 div.main-nav-list-container
-{    
+{
     background-color: rgba(201, 122, 71, 0.9); /* a nice orangy color */
     height: 0;
     left: 0;
@@ -463,8 +477,10 @@ nav .phone-number
 , nav .twitter-container
 , nav .email-container
 {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     background-color: rgba(140, 65, 252, 1.0);
-    background-color: hsla(42, 0%, 20%, 0.8);
+    background-color: hsla(42, 0%, 20%, 0.6);
     border-radius: 4px;
     bottom: -15px;
     box-shadow: 0 1px 4px #101010;
@@ -500,6 +516,7 @@ nav .twitter-image
 }
 
 .services-list
+, .apps-list
 {
     list-style-type: none;
     padding: 0;
@@ -507,19 +524,29 @@ nav .twitter-image
 
 .services-list-icon-container
 , .services-list-copy-container
+, .apps-list-icon-container
+, .apps-list-copy-container
 {
     display: inline-block;
     vertical-align: top;
 }
 
 .services-list-copy-container
+, .apps-list-copy-container
 {
     width: 75%;
 }
 
 .services-list-icon-container
+, .apps-list-icon-container
 {
     width: 20%;
+}
+
+.apps-list-icon-container
+{
+    margin-right: 15px;
+    margin-top: 25px;
 }
 
 .services-list-icon.website-building
@@ -655,9 +682,12 @@ div#main .sleeve #sidebar
 
 footer
 {
+    background-color: rgba(39, 32, 28, 1);
+    color: #EFEFEF;
     font-size: 0.5em;
     margin-top: 100px;
     margin-top: 30em;
+    padding: 25px 0;
     position: relative;
     width: 100%;
 }
@@ -665,7 +695,7 @@ footer
 footer > div
 {
     margin: 0 auto;
-    max-width: 90%;    
+    max-width: 90%;
     padding: 15px 10px;
 }
 
@@ -680,6 +710,16 @@ footer .columns
 footer .columns:nth-child(even)
 {
     text-align: center;
+}
+
+footer .columns:last-child
+{
+    text-align: right;
+}
+
+footer a
+{
+    color: #EFEFEF;
 }
 
 #imgTexas {
@@ -815,34 +855,46 @@ footer .columns:nth-child(even)
     body.technology-services li.technology-services a
     , body.technology-services li.technology-services a:visited
     {
-        color: rgb(0, 154, 200);   
+        color: rgb(0, 154, 200);
     }
 
     body.who-we-are li.who-we-are a
     , body.who-we-are li.who-we-are a a:visited
     {
-        color: rgb(0, 154, 200);   
+        color: rgb(0, 154, 200);
     }
 
     body.pricing li.pricing a
     , body.pricing li.pricing a a:visited
     {
-        color: rgb(0, 154, 200);   
+        color: rgb(0, 154, 200);
     }
 
     body.our-work li.our-work a
     , body.our-work li.our-work a a:visited
     {
-        color: rgb(0, 154, 200);   
+        color: rgb(0, 154, 200);
+    }
+
+    body.our-apps li.our-apps a
+    , body.our-apps li.our-apps a a:visited
+    {
+        color: rgb(0, 154, 200);
+    }
+
+    body.support li.support a
+    , body.support li.support a a:visited
+    {
+        color: rgb(0, 154, 200);
     }
 
     body.blog li.blog a
     , body.blog li.blog a a:visited
     {
-        color: rgb(0, 154, 200);   
+        color: rgb(0, 154, 200);
     }
-	
-	.content 
+
+	.content
     {
        max-width: 1000px;
        padding-top: 6em;
@@ -875,7 +927,6 @@ footer .columns:nth-child(even)
 
     .big-background-image
     {
-        background-image: url(/media/courthouse.png);
         background-position: 45% 0;
         background-repeat: no-repeat;
         background-size: 150% auto;
@@ -893,6 +944,8 @@ footer .columns:nth-child(even)
 
     .content .about-us-copy
     {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
         color: #FEFEFE;
         display: inline-block;
         margin-top: -5em;
@@ -1084,7 +1137,7 @@ footer .columns:nth-child(even)
         margin-top: 25px;
         width: 30%;
     }
-    
+
     .services-list-icon-container
     , .services-list-copy-container
     {
@@ -1230,18 +1283,17 @@ footer .columns:nth-child(even)
     }
 }
 
-@media only screen 
+@media only screen
 and (min-width: 500px)
 and (min-device-width: 1024px) {
     .big-background-image
     {
-        background-image: url(/media/courthouse.png);
         background-position: 45% 0;
         background-repeat: no-repeat;
         background-size: 150% auto;
         height: 25em;
     }
-    
+
     .content .about-us-copy
     {
         margin-top: -8em;
@@ -1253,18 +1305,17 @@ and (min-device-width: 1024px) {
     }
 }
 
-@media only screen 
+@media only screen
 and (min-width: 600px)
 and (min-device-width: 1024px) {
     .big-background-image
     {
-        background-image: url(/media/courthouse.png);
         background-position: 45% 0;
         background-repeat: no-repeat;
         background-size: 150% auto;
         height: 30em;
     }
-    
+
     .content .about-us-copy
     {
         margin-top: -11em;
@@ -1279,13 +1330,12 @@ and (min-device-width: 1024px) {
 @media only screen and (min-width: 700px) {
     .big-background-image
     {
-        background-image: url(/media/courthouse.png);
         background-position: 45% 0;
         background-repeat: no-repeat;
         background-size: 150% auto;
         height: 34em;
     }
-    
+
     .content .about-us-copy
     {
         margin-top: -11em;
@@ -1318,13 +1368,12 @@ and (min-device-width: 1024px) {
 @media only screen and (min-width: 800px) {
     .big-background-image
     {
-        background-image: url(/media/courthouse.png);
         background-position: 45% 0;
         background-repeat: no-repeat;
         background-size: 150% auto;
         height: 39em;
     }
-    
+
     .content .about-us-copy
     {
         margin-top: -11em;
@@ -1334,13 +1383,12 @@ and (min-device-width: 1024px) {
 @media only screen and (min-width: 900px) {
     .big-background-image
     {
-        background-image: url(/media/courthouse.png);
         background-position: 45% 0;
         background-repeat: no-repeat;
         background-size: 150% auto;
         height: 43em;
     }
-    
+
     .content .about-us-copy
     {
         margin-top: -11em;
@@ -1350,7 +1398,6 @@ and (min-device-width: 1024px) {
 @media only screen and (min-width: 1000px) {
     .big-background-image
     {
-        background-image: url(/media/courthouse.png);
         background-position: 45% 0;
         background-repeat: no-repeat;
         background-size: 150% auto;
@@ -1361,13 +1408,12 @@ and (min-device-width: 1024px) {
 @media only screen and (min-width: 1100px) {
     .big-background-image
     {
-        background-image: url(/media/courthouse.png);
         background-position: 45% 0;
         background-repeat: no-repeat;
         background-size: 150% auto;
         height: 49em;
     }
-    
+
     .content .about-us-copy
     {
         margin-top: -11em;
@@ -1377,13 +1423,12 @@ and (min-device-width: 1024px) {
 @media only screen and (min-width: 1200px) {
     .big-background-image
     {
-        background-image: url(/media/courthouse.png);
         background-position: 45% 0;
         background-repeat: no-repeat;
         background-size: 150% auto;
         height: 52em;
     }
-    
+
     .content .about-us-copy
     {
         margin-top: -11em;
@@ -1393,13 +1438,12 @@ and (min-device-width: 1024px) {
 @media only screen and (min-width: 1300px) {
     .big-background-image
     {
-        background-image: url(/media/courthouse.png);
         background-position: 45% 0;
         background-repeat: no-repeat;
         background-size: 150% auto;
         height: 55em;
     }
-    
+
     .content .about-us-copy
     {
         margin-top: -11em;
@@ -1409,13 +1453,12 @@ and (min-device-width: 1024px) {
 @media only screen and (min-width: 1400px) {
     .big-background-image
     {
-        background-image: url(/media/courthouse.png);
         background-position: 45% 0;
         background-repeat: no-repeat;
         background-size: 150% auto;
         height: 58em;
     }
-    
+
     .content .about-us-copy
     {
         margin-top: -11em;
@@ -1425,13 +1468,12 @@ and (min-device-width: 1024px) {
 @media only screen and (min-width: 1500px) {
     .big-background-image
     {
-        background-image: url(/media/courthouse.png);
         background-position: 45% 0;
         background-repeat: no-repeat;
         background-size: 150% auto;
         height: 61em;
     }
-    
+
     .content .about-us-copy
     {
         margin-top: -11em;
@@ -1441,13 +1483,12 @@ and (min-device-width: 1024px) {
 @media only screen and (min-width: 1600px) {
     .big-background-image
     {
-        background-image: url(/media/courthouse.png);
         background-position: 45% 0;
         background-repeat: no-repeat;
         background-size: 150% auto;
         height: 64em;
     }
-    
+
     .content .about-us-copy
     {
         margin-top: -11em;
@@ -1457,7 +1498,6 @@ and (min-device-width: 1024px) {
 @media only screen and (min-width: 1700px) {
     .big-background-image
     {
-        background-image: url(/media/courthouse.png);
         background-position: 45% 0;
         background-repeat: no-repeat;
         background-size: 150% auto;
@@ -1473,7 +1513,6 @@ and (min-device-width: 1024px) {
 @media only screen and (min-width: 1800px) {
     .big-background-image
     {
-        background-image: url(/media/courthouse.png);
         background-position: 45% 0;
         background-repeat: no-repeat;
         background-size: 150% auto;
@@ -1489,7 +1528,6 @@ and (min-device-width: 1024px) {
 @media only screen and (min-width: 1900px) {
     .big-background-image
     {
-        background-image: url(/media/courthouse.png);
         background-position: 45% 0;
         background-repeat: no-repeat;
         background-size: 150% auto;
@@ -1505,7 +1543,6 @@ and (min-device-width: 1024px) {
 @media only screen and (min-width: 2000px) {
     .big-background-image
     {
-        background-image: url(/media/courthouse.png);
         background-position: 45% 0;
         background-repeat: no-repeat;
         background-size: 150% auto;
@@ -1521,7 +1558,6 @@ and (min-device-width: 1024px) {
 @media only screen and (min-width: 2100px) {
     .big-background-image
     {
-        background-image: url(/media/courthouse.png);
         background-position: 45% 0;
         background-repeat: no-repeat;
         background-size: 150% auto;
@@ -1537,7 +1573,6 @@ and (min-device-width: 1024px) {
 @media only screen and (min-width: 2200px) {
     .big-background-image
     {
-        background-image: url(/media/courthouse.png);
         background-position: 45% 20%;
         background-repeat: no-repeat;
         background-size: 150% auto;
@@ -1553,7 +1588,6 @@ and (min-device-width: 1024px) {
 @media only screen and (min-width: 2300px) {
     .big-background-image
     {
-        background-image: url(/media/courthouse.png);
         background-position: 45% 20%;
         background-repeat: no-repeat;
         background-size: 150% auto;
@@ -1569,7 +1603,6 @@ and (min-device-width: 1024px) {
 @media only screen and (min-width: 2400px) {
     .big-background-image
     {
-        background-image: url(/media/courthouse.png);
         background-position: 45% 20%;
         background-repeat: no-repeat;
         background-size: 150% auto;
@@ -1585,7 +1618,6 @@ and (min-device-width: 1024px) {
 @media only screen and (min-width: 2500px) {
     .big-background-image
     {
-        background-image: url(/media/courthouse.png);
         background-position: 45% 20%;
         background-repeat: no-repeat;
         background-size: 150% auto;
@@ -1601,7 +1633,6 @@ and (min-device-width: 1024px) {
 @media only screen and (min-width: 2600px) {
     .big-background-image
     {
-        background-image: url(/media/courthouse.png);
         background-position: 45% 20%;
         background-repeat: no-repeat;
         background-size: 150% auto;
