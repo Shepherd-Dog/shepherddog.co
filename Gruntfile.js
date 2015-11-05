@@ -1,6 +1,6 @@
 module.exports = function(grunt) {
   var globalConfig = {
-    deployment_target: "~/public/shepherddog.co/public"
+    deployment_target: "/var/www/shepherddog.co/public_html"
   };
 
   // Project configuration.
@@ -29,48 +29,48 @@ module.exports = function(grunt) {
     devUpdate: {
         main: {
             options: {
-                updateType: 'report', //just report outdated packages 
-                reportUpdated: false, //don't report up-to-date packages 
-                semver: true, //stay within semver when updating 
+                updateType: 'report', //just report outdated packages
+                reportUpdated: false, //don't report up-to-date packages
+                semver: true, //stay within semver when updating
                 packages: {
-                    devDependencies: true, //only check for devDependencies 
+                    devDependencies: true, //only check for devDependencies
                     dependencies: false
                 },
-                packageJson: null, //use matchdep default findup to locate package.json 
-                reportOnlyPkgs: [] //use updateType action on all packages 
+                packageJson: null, //use matchdep default findup to locate package.json
+                reportOnlyPkgs: [] //use updateType action on all packages
             }
         }
     },
     'http-server': {
- 
+
         'dev': {
- 
-            // the server root directory 
+
+            // the server root directory
             root: "./",
- 
-            // the server port 
-            // can also be written as a function, e.g. 
-            // port: function() { return 8282; } 
+
+            // the server port
+            // can also be written as a function, e.g.
+            // port: function() { return 8282; }
             port: 8001,
-            
- 
-            // the host ip address 
-            // If specified to, for example, "127.0.0.1" the server will  
-            // only be available on that ip. 
-            // Specify "0.0.0.0" to be available everywhere 
+
+
+            // the host ip address
+            // If specified to, for example, "127.0.0.1" the server will
+            // only be available on that ip.
+            // Specify "0.0.0.0" to be available everywhere
             host: "0.0.0.0",
- 
+
             showDir : true,
             autoIndex: true,
- 
-            // server default file extension 
+
+            // server default file extension
             ext: "html",
- 
-            // run in parallel with other tasks 
+
+            // run in parallel with other tasks
             runInBackground: false
- 
+
         }
- 
+
     },
     imageoptim: {
       optimizeImages: {
@@ -164,18 +164,18 @@ module.exports = function(grunt) {
         prod: {
             options: {
                 src: "./",
-                dest: "~/public/shepherddog.co/public",
-                host: "dbrunow@firehawk.brunow.org",
+                dest: "/var/www/shepherddog.co/public_html",
+                host: "dbrunow@firehawk.shepherddog.co",
                 delete: true // Careful this option could cause data loss, read the docs!
             }
         }
     },
     sitemap: {
       dist: {
-        pattern: ['**/*.html', 
-                  '!**/google*.html', 
-                  '!**/node_modules/**', 
-                  '!**/tests/**', 
+        pattern: ['**/*.html',
+                  '!**/google*.html',
+                  '!**/node_modules/**',
+                  '!**/tests/**',
                   '!**/phantomas/**']
       }
     },
