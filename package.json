@@ -1,7 +1,7 @@
 {
   "name": "shepherddog.co",
   "version": "0.1.0",
-  "homepage": "http://shepherddog.co",
+  "homepage": "https://shepherddog.co",
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-concat": "^0.5.1",

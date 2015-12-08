@@ -100,11 +100,11 @@ module.exports = function(grunt) {
     pagespeed: {
       options: {
         nokey: true,
-        url: "http://shepherddog.co"
+        url: "https://shepherddog.co"
       },
       prod: {
         options: {
-          url: "http://shepherddog.co",
+          url: "https://shepherddog.co",
           locale: "en_US",
           strategy: "desktop",
           threshold: 80
@@ -124,7 +124,7 @@ module.exports = function(grunt) {
         options : {
           indexPath : './phantomas/',
           options   : {},
-          url       : 'http://shepherddog.co/',
+          url       : 'https://shepherddog.co/',
           buildUi   : true
         }
       }
