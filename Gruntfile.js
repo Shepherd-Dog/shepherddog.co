@@ -207,7 +207,7 @@ module.exports = function(grunt) {
     },
     watch: {
       files: ['<%= jshint.files %>', 'tests/*.html', 'css/*.css'],
-      tasks: ['jshint', 'qunit', 'uglify', 'concat', 'cssmin']
+      tasks: ['jshint', 'uglify', 'concat', 'cssmin']
     }
   });
 
@@ -229,7 +229,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-dev-update');
 
   // Default task(s).
-  grunt.registerTask('default', ['install-dependencies', 'jshint', 'qunit', 'uglify', 'concat', 'cssmin', 'sitemap:dist']);
+  grunt.registerTask('default', ['install-dependencies', 'jshint', 'uglify', 'concat', 'cssmin', 'sitemap:dist']);
 
   //Other tasks
   grunt.registerTask("deploy", ["rsync:prod", "pagespeed", "phantomas"]);

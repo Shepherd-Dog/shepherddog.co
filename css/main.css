@@ -402,10 +402,11 @@ span.logo
     border-radius: 4px;
     box-shadow: 0 1px 4px #101010;
     color: #FEFEFE;
-    font-size: 1.0em;
+    font-size: .9em;
     padding: 5px 10px;
     position: absolute;
     right: 10px;
+    text-align: right;
 }
 
 div.main-nav-list-container
@@ -709,7 +710,7 @@ footer .columns
     display: inline-block;
     padding: 5px;
     vertical-align: top;
-    width: 32%;
+    width: 31%;
 }
 
 footer .columns:nth-child(even)
@@ -1275,6 +1276,23 @@ footer a
         position: absolute;
         right: 0;
     }
+
+}
+
+@media only screen and (max-width: 575px)
+{
+
+    footer .columns
+    {
+        padding: 10px 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    footer .columns:last-child
+    {
+        text-align: center;
+    }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) /* targeting iPad */
@@ -1311,6 +1329,19 @@ footer a
     {
         width: 40px;
     }
+ 
+    footer .columns
+    {
+        padding: 10px 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    footer .columns:last-child
+    {
+        text-align: center;
+    }
+
 }
 
 @media only screen
