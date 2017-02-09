@@ -22,7 +22,7 @@ module.exports = function(grunt) {
           cwd: "css/concat",
           src: ["*.css"],
           dest: "minified",
-          ext: "v1.0.6.min.css"
+          ext: "v1.0.7.min.css"
         }]
       }
     },
@@ -202,7 +202,7 @@ module.exports = function(grunt) {
       },
       build: {
         src: 'scripts/shepherd-dog.js',
-        dest: 'minified/shepherd-dogv1.0.6.min.js'
+        dest: 'minified/shepherd-dogv1.0.7.min.js'
       }
     },
     watch: {
