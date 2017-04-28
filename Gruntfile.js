@@ -22,7 +22,7 @@ module.exports = function(grunt) {
           cwd: "css/concat",
           src: ["*.css"],
           dest: "minified",
-          ext: "v1.0.7.min.css"
+          ext: "v1.0.8.min.css"
         }]
       }
     },
@@ -95,7 +95,7 @@ module.exports = function(grunt) {
           jQuery: true
         },
       },
-      files: ['Gruntfile.js', 'scripts/*.js', 'tests/*.js']
+      files: ['Gruntfile.js', 'scripts/*.js']
     },
     pagespeed: {
       options: {
@@ -202,12 +202,12 @@ module.exports = function(grunt) {
       },
       build: {
         src: 'scripts/shepherd-dog.js',
-        dest: 'minified/shepherd-dogv1.0.7.min.js'
+        dest: 'minified/shepherd-dogv1.0.8.min.js'
       }
     },
     watch: {
-      files: ['<%= jshint.files %>', 'tests/*.html', 'css/*.css'],
-      tasks: ['jshint', 'uglify', 'concat', 'cssmin']
+      files: ['<%= jshint.files %>', 'css/*.css'],
+      tasks: ['uglify', 'concat', 'cssmin']
     }
   });
 

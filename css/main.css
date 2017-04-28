@@ -255,6 +255,17 @@ body {
     margin-top: 0;
 }
 
+.content .about-us-copy ul
+{
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.content .about-us-copy ul > li
+{
+    margin: 5px 0;
+}
+
 .content .bio-image
 {
     border-radius: 4px;
